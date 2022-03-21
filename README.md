@@ -1,2 +1,2 @@
 # piscine-42
-Love to all my bitches 
+Love to all
