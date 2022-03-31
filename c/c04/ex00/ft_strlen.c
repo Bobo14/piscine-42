@@ -1,37 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bdelord <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/18 14:06:41 by bdelord           #+#    #+#             */
-/*   Updated: 2022/03/22 11:13:15 by bdelord          ###   ########.fr       */
+/*   Created: 2022/03/26 18:18:55 by bdelord           #+#    #+#             */
+/*   Updated: 2022/03/26 18:28:36 by bdelord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <string.h>
 
-char	*ft_strcpy(char *dest, char *src)
+int	ft_strlen(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (str[i] != '\0')
 	{
-		dest[i] = src[i];
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (i);
 }
 /*
-int	main()
+int main()
 {
-	char tabdest[100];
-	char ptrsrc[] = "je suis une vitrine dans l'espace inconstantinntielle";
-	ft_strcpy(tabdest, ptrsrc);
-	printf("%s\n", tabdest);
-	return (0);
+	char a[] = "a!mEz v0us (les) ch0ux?";
+	printf("%ld\n", strlen(a));
+	printf("%d", ft_strlen(a));
 }
 */

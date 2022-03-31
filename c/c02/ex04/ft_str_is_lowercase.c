@@ -1,37 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bdelord <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/18 14:06:41 by bdelord           #+#    #+#             */
-/*   Updated: 2022/03/22 11:13:15 by bdelord          ###   ########.fr       */
+/*   Created: 2022/03/21 11:29:14 by bdelord           #+#    #+#             */
+/*   Updated: 2022/03/22 11:24:55 by bdelord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char	*ft_strcpy(char *dest, char *src)
+int	ft_str_is_lowercase(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (str[i] != '\0')
 	{
-		dest[i] = src[i];
-		i++;
+		if ((str[i] >= 'a') && (str[i] <= 'z'))
+			i++;
+		else
+			return (0);
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (1);
 }
 /*
-int	main()
+int main()
 {
-	char tabdest[100];
-	char ptrsrc[] = "je suis une vitrine dans l'espace inconstantinntielle";
-	ft_strcpy(tabdest, ptrsrc);
-	printf("%s\n", tabdest);
+
+	char a[] = "allo";
+	char b[] = "Ao^%9";
+	char c[] = "68nh54";
+	char d[] = "";
+	char e[] = "/12*ss@#$ffwd";
+	char f[] = "aB";
+	ft_str_is_lowercase(f);
+	printf("%d", ft_str_is_lowercase(f));
 	return (0);
 }
 */

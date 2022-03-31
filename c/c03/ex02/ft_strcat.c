@@ -1,37 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bdelord <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/18 14:06:41 by bdelord           #+#    #+#             */
-/*   Updated: 2022/03/22 11:13:15 by bdelord          ###   ########.fr       */
+/*   Created: 2022/03/24 10:56:30 by bdelord           #+#    #+#             */
+/*   Updated: 2022/03/26 16:42:59 by bdelord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <string.h>
 
-char	*ft_strcpy(char *dest, char *src)
+char	*ft_strcat(char *dest, char *src)
 {
 	int	i;
+	int	j;
 
 	i = 0;
+	j = 0;
+	while (dest[j] != '\0')
+		j++;
 	while (src[i] != '\0')
 	{
-		dest[i] = src[i];
+		dest[j + i] = src[i];
 		i++;
 	}
-	dest[i] = '\0';
+	dest[j + i] = '\0';
 	return (dest);
 }
 /*
 int	main()
 {
-	char tabdest[100];
-	char ptrsrc[] = "je suis une vitrine dans l'espace inconstantinntielle";
-	ft_strcpy(tabdest, ptrsrc);
-	printf("%s\n", tabdest);
-	return (0);
+	char one[50] = "coucou";
+	char two[15] = "maman";
+	printf("%s\n", strcat(one, two));
+	printf("%s", ft_strcat(one, two));
 }
 */

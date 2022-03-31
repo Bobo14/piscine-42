@@ -1,37 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bdelord <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/18 14:06:41 by bdelord           #+#    #+#             */
-/*   Updated: 2022/03/22 11:13:15 by bdelord          ###   ########.fr       */
+/*   Created: 2022/03/24 16:32:13 by bdelord           #+#    #+#             */
+/*   Updated: 2022/03/26 17:10:41 by bdelord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <string.h>
 
-char	*ft_strcpy(char *dest, char *src)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int	i;
+	unsigned int	i;
+	unsigned int	j;
 
 	i = 0;
-	while (src[i] != '\0')
+	j = 0;
+	while (dest[j] != '\0')
+		j++;
+	while (i < nb && src[i] != '\0')
 	{
-		dest[i] = src[i];
+		dest[j + i] = src[i];
 		i++;
 	}
-	dest[i] = '\0';
+	dest[j + i] = '\0';
 	return (dest);
 }
 /*
-int	main()
+int main()
 {
-	char tabdest[100];
-	char ptrsrc[] = "je suis une vitrine dans l'espace inconstantinntielle";
-	ft_strcpy(tabdest, ptrsrc);
-	printf("%s\n", tabdest);
-	return (0);
+	char one[100] = "coucou";
+	char two[100] = "papa";
+	//printf("%s\n", strncat(one, two, 3));
+	printf("%s", ft_strncat(one, two, 3));
 }
 */

@@ -1,37 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bdelord <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/18 14:06:41 by bdelord           #+#    #+#             */
-/*   Updated: 2022/03/22 11:13:15 by bdelord          ###   ########.fr       */
+/*   Created: 2022/03/26 20:43:13 by bdelord           #+#    #+#             */
+/*   Updated: 2022/03/26 21:31:15 by bdelord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include<unistd.h>
 
-char	*ft_strcpy(char *dest, char *src)
+void	ft_putstr(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (str[i] != '\0')
 	{
-		dest[i] = src[i];
+		write(1, &str[i], 1);
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
 }
 /*
 int	main()
 {
-	char tabdest[100];
-	char ptrsrc[] = "je suis une vitrine dans l'espace inconstantinntielle";
-	ft_strcpy(tabdest, ptrsrc);
-	printf("%s\n", tabdest);
-	return (0);
+	char a[] = "Y0u ar3 a 5runchy b1te";
+	ft_putstr(a);
 }
 */

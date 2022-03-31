@@ -1,0 +1,307 @@
+echo "..."   					 = print phrase
+echo "..." > ...txt  			 = register and overwrite inside the specified file
+echo "..." >> ...txt			 = register and add a line inside the specified file
+clear                  	 	     = clear terminal
+pwd        				  		 = print working directory
+cd           					 = change directory
+ls ...   					     = list file
+   ls -l      				     = long listing file
+   ls (...)*(...)				 = outpout what is asking
+cd ~/...   					     = way to directory/file
+cd ~/...+tab				     = print all file by letter
+mkdir        					 = make directory
+touch ...   					 = make file
+wc ...txt   					 = word count
+cat ...txt  					 = print file on terminal (concatenate)
+less ...    		 			 = viewing multi page files
+head (-n)   					 = viewing first 10 or specified line
+tail (-n)   					 = viewing last 10 or specified line
+nano / vim / emacs				 = editors
+mv ... (path)			 		 = move and rename files/directory
+cp ...txt ...txt				 = move files (and copy)
+cp -r							 = move directory
+rm								 = delete file
+rm -r							 = delete directory
+man ...	= manual  
+	/ ...						 = research
+man 2 ....					     = research C
+	press n or shift + n		 = navigate to result
+apropos ...						 = research command and description
+*								 = reprensent zero or more of any character
+grep							 = searching into files
+    egrep . + * {} () []    	 = searching into files / any character
+	egrep "\w" "\d" "\s"		 = searching all word number space (capital is opposite)
+	egrep -v -i ^ $ | 			 = invert match / ignore match / start line / end line / or
+find . -name "..."				 = research
+alias ...="..."					 = create shortcut to .bash_profile
+diff							 = difference between line
+sdiff							 = comparing all line
+shasum							 = compare 2 files hash
+ |								 = PIPE [program that produces output] | [program uses pipe output as input instead of a file]
+make							 = tool for creating relationships between files and programs
+	makefiles                    = text files that contain a list of rules
+bc								 = bench calculator
+expr							 = simple math in bash
+ctrl +\							 = exit program in terminal
+gt								 = greater
+read						  	 = stores a string that the user provides in a variable
+&&                               = AND operator
+||								 = OR operator 
+[[]]							 = expression conditionnel
+0								 = true
+1								 = false
+len_sum							 = sum of string
+let								 = do a things you ask
+
+
+Braces
+	eval 						 = use variable with brace
+	echo {0..5}{a..9}
+	
+for (loops)
+	for variable in string/array/brace/result for command
+	do echo.......
+	done
+	
+while (loop)
+do
+echo .....
+done 
+
+Array
+	...=(... ...)					 = array
+	+=								 = add end of array
+	echo $#{...[*]}					 = lenght of array
+	echo ${...[1]}					 = retrieve array
+	0.1.2.3.4.5.6					 = index array number to acces it
+
+
+76 if / else / elif / then /fi
+77 
+
+
+Logical Operator
+	=~							 = Matches Regular Expression	[[ $consonants =~ [aeiou] ]]
+	=							 = String Equal to				[[ $password = "pegasus" ]]
+	!=							 = String Not Equal to			[[ $fruit != "banana" ]]
+	!							 = Not							[[ ! "apple" =~ ^b ]]
+	
+Logical Flag
+	-gt							 = Greater than					[[ $planets -gt 8 ]]
+	-ge							 = Greater than or Equal to		[[ $votes -ge 270 ]]
+	-eq							 = Equal						[[ $fingers -eq 10 ]]
+	-ne							 = Not Equal					[[ $pages -ne 0 ]]
+	-le							 = Less Than or Equal To		[[ $candles -le 9 ]]
+	-lt							 = Less Than					[[ $wives -lt 2 ]]
+	-e							 = A file Exists				[[ -e $taxes_2016 ]]
+	-d							 = A directory Exists			[[ -d $photos ]]
+	-z							 = Lenght of String is Zero		[[ -z $name ]]
+	-n							 = Lenght of String is Non Zero	[[ -n $name ]]
+	
+
+Variables
+	=							 = assigned
+	$...						 = acces the variable
+	$@							 = array all arguments passed
+	$#							 = total number of argument passed
+	$?                           = 
+	let...=...+...				 = modify variable 
+	$(cat/grep....)				 = variation
+	
+	
+	odd=impair
+	
+Metacharacter
+.		= Any character
+\w		= A word
+\W		= not a word
+\d		= a digit
+\D		= not a digit
+\s		= whitespace
+\S		= not withespace
+[def]	= a set of character
+[^def]	= negation of set
+[e-q]	= a range of character
+^		= beginning a string
+$		= end of string
+\n		= newline
++		= one or more of previous
+*		= zero or more of previous
+?		= zero or one of previous
+|		= either the previous or the following
+{6}		= exactly 6 of previous
+{4,6}	= between 4 and 6 or previous
+{4,}	= more than 4 of previous 
+
+
+emacs
+emacs -nw    sans graphic
+   quitter  ctrl xc
+   saved    ctrl xs
+   background ctrl z et fg pour revenir
+   deplacement ctrl e ctrl a
+   reserch ctrl s
+   ouvrir autre fichier ctrl xf
+   split ecran ctrl x3 ou ctrl x2
+   deplacement de fenetre ctrl xo
+   fermer une fenetre ctrl 0
+   header 42 ctrl ch
+   
+   
+GIT
+
+
+Language C
+
+// commentaire
+/* commentaire aussi */
+
+gcc -o name
+gcc *.c -o = all .c file compilation
+fichier .h = fichier de config
+
+%d = nombre entier (int)
+%f = nombre flottant (float)
+%c = caractere (char)
+%s = chaine de caracteres (texte)
+%p = afficher adresse pointeur 
+
+Pointeur = variable contenant l'adresse d'une autre variable 
+%d = affiche une adresse de variable ou de pointeur
+
+uneVariable = valeur de la valeur
+&maVariable = adresse de la valeu
+
+*monPointeur = Null ou *monPointeur = &maVariable : c'est la declaration, initialisation, creation d'un pointeur
+
+monPointeur = adresse de la variable pointee
+*monPointeur = valeur de la variable pointee
+&monPointeur = adresse du pointeur
+
+
+
+
+Mot Reserve :
+auto
+bool
+break
+case
+char
+const	= immuable
+default
+do
+double
+else
+enum
+extern
+float
+for
+goto
+if
+int
+long
+register= memoire registre
+return
+short
+signed)
+sizeof
+static
+struct
+switch
+typedef
+union
+unsigned
+void
+volatile= memoire ram
+while
+
+les fonctions :
+	printf
+	scanf
+Creer une fonction
+	int nomfonction(parametre)
+		{
+		return ...
+		}
+
+&variable = adresse de stockage variable
+scanf	  = read user input
+
+operateur;
++
+-
+*
+/ division = 5 / 2 = 2
+% modulo   = 5 % 2 = 1int
+
+a = a - x s`ecrit a -= x 
+a = a * x s`ecrit a *= x etc...
+
+a += 1 s`ecrit a++ ou --a sont a eviter
+a -= 1 s`ecrit a-- ou --a
+
+opperateur de comparaison :
+
+== egale a
+!= different de 
+< plus petit que
+> plus grand que
+<= plus petit ou egal a
+>= plus grand ou egal a
+&& et
+|| ou
+!  n`est pas
+
+if(...)
+else(..)
+
+if(...)
+else if(...)
+''
+''
+''
+else(...)
+Une ligne entre les conditions repars a 0
+
+switch  (utile si trop de if)
+	case
+		break
+	case
+		break
+	default
+		break
+		
+Le ternaire en 1 ligne
+
+Boucles :
+
+while() = test avant
+	{}
+	
+do      = test apres
+	{}
+	while();
+
+for(condition multiple)
+
+
+fichier.h
+#ifndef ... 
+#define ...= constante remplace contenu
+...
+#endif 
+
+constante predefini
+__FILE__
+__LINE__
+__DATE__
+__TIME__
+
+Declaration de tableau  (tips : decalage de 1 dans les tableaux)
+	type nomdetableau[X]; exemple int tableau[4];
+Initialisation
+	type nomdetableau[X] = {X, X, X, X, X};
+	type nomdetableau[X] = {0}; toute les adressses memoires valent 0
+	type nomdetableau[X] = {6}; seul la premieres adress vaut 6 les autres valent 0
+Acces tableau
+	nomdetableau[X] = X+1; exemple tableau[1] = 6;

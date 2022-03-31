@@ -6,7 +6,7 @@
 /*   By: bdelord <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/20 17:55:14 by bdelord           #+#    #+#             */
-/*   Updated: 2022/03/20 22:27:11 by bdelord          ###   ########.fr       */
+/*   Updated: 2022/03/22 11:19:24 by bdelord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,12 @@
 
 int	ft_str_is_alpha(char *str)
 {
-	int i;
+	int	i;
+
 	i = 0;
-	
 	while (str[i] != '\0')
 	{	
-		if ((str[i] >= 'A')  && (str[i] <= 'Z')
-			|| (str[i] >= 'a') && (str[i] <= 'z'))
+		if (str[i] >= 'A' && str[i] <= 'Z' || str[i] >= 'a' && str[i] <= 'z')
 			i++;
 		else
 			return (0);
@@ -30,14 +29,13 @@ int	ft_str_is_alpha(char *str)
 /*
 int main()
 {
-	while ((str[i] > 1) && (str[i] < 127))
 	char a[] = "allo";
 	char b[] = "Ao^%9";
 	char c[] = "68nh54";
 	char d[] = "";
-	char e[] = "\*/12ss@#$ffwd";
-	ft_str_is_alpha(d);
-	printf("%d", ft_str_is_alpha(d));
+	char e[] = "12ss@#$ffwd";
+	ft_str_is_alpha(c);
+	printf("%d", ft_str_is_alpha(c));
 	return (0);
 }
 */
